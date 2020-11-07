@@ -2,6 +2,11 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/practices/selenium_pra/pageobject/.pytest_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/practices/selenium_pra/pageobject/testcase/.pytest_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/practices/selenium_pra/selenium_file_alert/.pytest_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/practices/selenium_pra/selenium_frame_window/.pytest_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/practices/selenium_pra/selenium_js/.pytest_cache" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
