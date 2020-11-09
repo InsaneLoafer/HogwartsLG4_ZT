@@ -5,7 +5,6 @@
 # @File     : test_register.py
 import allure
 import pytest
-
 from assignments.web_practice.second_practice.po_weixin.pages.main_page import MainPage
 
 @allure.feature('测试注册功能')

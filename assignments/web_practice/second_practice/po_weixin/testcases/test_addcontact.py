@@ -3,12 +3,9 @@
 # @Time     : 2020/11/8 20:41
 # @Author   : ZhangTao
 # @File     : test_addcontact.py
-import os
-from time import sleep
+
 import allure
 import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 from assignments.web_practice.second_practice.po_weixin.pages.index_pages.index_page import IndexPage
 
