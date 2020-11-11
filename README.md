@@ -17,3 +17,7 @@
 ## Web自动化第二次直播作业
 
 ./assignments/web_practice/second_practice
+
+## Appium自动化第一次直播作业
+
+./assignments/appium_practice/first_practice
