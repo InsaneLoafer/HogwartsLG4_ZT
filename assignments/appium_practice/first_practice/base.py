@@ -8,6 +8,7 @@ from appium.webdriver.common.mobileby import MobileBy
 
 
 class Base:
+    nameList = ["aa11", "aa22"]
 
     def caps(self):
         desire_caps = {
