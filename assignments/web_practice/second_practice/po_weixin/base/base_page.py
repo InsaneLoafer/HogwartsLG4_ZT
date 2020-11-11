@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time     : 2020/11/7 22:37
 # @Author   : ZhangTao
-# @File     : base_page.py
+# @File     : base.py
 import os
 from time import sleep
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time     : 2020/11/6 17:37
 # @Author   : ZhangTao
-# @File     : base_page.py
+# @File     : base.py
 from selenium import webdriver
 from selenium.webdriver.remote.webdriver import WebDriver
 
