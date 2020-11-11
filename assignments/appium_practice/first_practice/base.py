@@ -9,7 +9,7 @@ from appium.webdriver.common.mobileby import MobileBy
 
 class Base:
 
-    def setup(self):
+    def caps(self):
         desire_caps = {
             "platformName": "Android",
             "deviceName": "127.0.0.1:7555",
@@ -17,6 +17,7 @@ class Base:
             "appActivity": ".launch.LaunchSplashActivity",
             "noReset": 'true',
             "skipDeviceInitialization": 'true',
+            "skipServerInstallation": 'true',
             # "dontStopAppOnReset": True,
             "unicodeKeyBoard": 'true', # 设置后可输入中文
             "resetKeyBoard": 'true' # 重置键盘
@@ -25,8 +26,6 @@ class Base:
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desire_caps)
         self.driver.implicitly_wait(5)
 
-    def teardown(self):
-        self.driver.quit()
 
     def fXpath(self, locator):
         return self.driver.find_element(MobileBy.XPATH, locator)
@@ -44,7 +43,7 @@ class Base:
                                  'new UiScrollable(new UiSelector()'
                                  '.scrollable(true).instance(0))'
                                  '.scrollIntoView(new UiSelector()'
-                                 f'.text({text}).instance(0));').click()
+                                 f'.text("{text}").instance(0));').click()
 
 
 

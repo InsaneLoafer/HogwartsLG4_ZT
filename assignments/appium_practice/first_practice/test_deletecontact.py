@@ -3,16 +3,18 @@
 # @Time     : 2020/11/11 11:09
 # @Author   : ZhangTao
 # @File     : test_deletecontact.py
+from time import sleep
 import pytest
+
 from .base import Base
 
 
 class TestDeleteContact(Base):
     def setup(self):
-        self.setup()
+        self.caps()
 
     def teardown(self):
-        self.teardown()
+        self.driver.quit()
 
     def find_name(self, name):
         # 点击放大镜按钮
@@ -20,12 +22,15 @@ class TestDeleteContact(Base):
 
         # 点击搜索输入框
         self.fXpath('//*[@resource-id="com.tencent.wework:id/gpg"]').send_keys(name)
+        sleep(2)
 
         # 获取搜索结果列表
-        resultlist = self.fXpaths('//android.widget.FrameLayout')[5:]
+        resultlist = self.fXpaths('//android.widget.FrameLayout')
+        sleep(2)
+        print(len(resultlist))
         return len(resultlist)
 
-    @pytest.mark.parametrize('name', ['12', 'michael72121', 'michael69227'])
+    @pytest.mark.parametrize("name", ["aa11", "aa12"])
     def test_deletecontact(self, name):
         # 打开通讯录
         self.open_contact()
@@ -34,10 +39,10 @@ class TestDeleteContact(Base):
         original_list = self.find_name(name)
 
         # 选择要删除的人
-        self.scroll_find(name)
+        self.fXpaths(f'//*[@text="{name}"]')[1].click()
 
         # 点击右上角三个点
-        self.fXpath('//*[resource-id="com.tencent.wework:id/i6d"]').click()
+        self.driver.find_element_by_id('com.tencent.wework:id/i6d').click()
 
         # 点击编辑成员
         self.fXpath('//*[@text="编辑成员"]').click()
