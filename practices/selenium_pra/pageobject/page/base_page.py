@@ -10,7 +10,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 class BasePage():
     _base_url = ""
 
-    def __init__(self, driver:WebDriver=None):
+    def __init__(self, driver: WebDriver=None):
         self._driver = ""
         if driver is None:
             self._driver = webdriver.Chrome()
