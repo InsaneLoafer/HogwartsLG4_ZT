@@ -4,10 +4,8 @@
 # @Author   : ZhangTao
 # @File     : main.py
 from time import sleep
-
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.common.by import By
-
 from practices.appium_pra.demo.page.basepage import BasePage
 
 
