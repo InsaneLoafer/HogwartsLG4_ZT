@@ -1,0 +1,47 @@
+# 进行百度搜索的测试数据
+
+# 测试数据参数化
+data:
+  - 测试人
+  - 打工魂
+  - requests
+  - selenium
+
+# 测试步骤参数化
+steps:
+  - webdriver:
+      # 设置浏览器类型
+      browser: chrome
+
+  # 设置目的网址
+  - get: http://www.baidu.com
+
+  # 设置find_element参数
+  - find_element:
+      # by方法
+      by: id
+      # 元素位置
+      locator: kw
+      # 操作方法
+      operation:
+        - click: []
+        - send_keys: ${data}
+
+  # 设置finds_element参数
+  - finds_element:
+      # by方法
+      by: id
+      # 元素位置
+      locator: kw
+      # 操作方法
+      operation:
+        - click: []
+        - send_keys: ${data}
+
+  # 滑动页面寻找元素操作
+  - scroll_find:
+      # 元素位置
+
+
+
+
