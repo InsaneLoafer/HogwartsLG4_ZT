@@ -24,23 +24,39 @@ steps:
       locator: kw
       # 操作方法
       operation:
-        - click: []
         - send_keys: ${data}
-
-  # 设置finds_element参数
-  - finds_element:
+  # 设置find_element参数
+  - find_element:
       # by方法
       by: id
       # 元素位置
-      locator: kw
+      locator: su
       # 操作方法
       operation:
         - click: []
-        - send_keys: ${data}
+
+
+#  # 设置finds_element参数
+#  - finds_element:
+#      # by方法
+#      by: id
+#      # 元素位置
+#      locator: kw
+#      # 操作方法
+#      operation:
+#        - click: []
+#        - send_keys: ${data}
 
   # 滑动页面寻找元素操作
   - scroll_find:
+      # by方法
+      by: xpath
       # 元素位置
+      locator: //*[@id="page"]/div/a[10]
+      # 操作方法
+      operation:
+        - click: []
+
 
 
 
