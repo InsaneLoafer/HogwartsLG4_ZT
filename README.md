@@ -21,3 +21,11 @@
 ## Appium自动化第一次直播作业
 
 ./assignments/appium_practice/first_practice
+
+## Appium自动化第二次直播作业
+
+./assignments/appium_practice/second_practice
+
+## 测试框架开发第一次直播作业
+
+./assignments/framework_practice/first_practice
